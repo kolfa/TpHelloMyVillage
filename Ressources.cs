@@ -12,7 +12,7 @@ public class Ressources
         get {return stones;}
         set {this.stones= value;}
     }
-    private Ressources ()
+    public Ressources ()
     {
         this.wood =10;
         this.stones= 10;
@@ -27,7 +27,7 @@ public class Ressources
     }
     public void useStone(int nbr)
     {
-        if (nbr > Stones )
+        if ((Stones - nbr) < nbr )
         {
             Console.WriteLine("Attention, quantité non suffusante !");
         }else
@@ -37,7 +37,7 @@ public class Ressources
     }
     public void useWood(int nbr)
     {
-        if (nbr > Wood )
+        if ((Wood - nbr) < Wood )
         {
             Console.WriteLine("Attention, quantité non suffusante !");
         }else

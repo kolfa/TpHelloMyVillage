@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrateur\\Desktop\\Dossier de travail\\POE_C_NET_12_DECEMBRE\\TP\\TP.csproj",
+      "projectUniqueName": "C:\\Users\\Administrateur\\Desktop\\Dossier de travail\\POE_C_NET_12_DECEMBRE\\TP\\TpHelloMyVillage\\TP.csproj",
       "projectName": "TP",
-      "projectPath": "C:\\Users\\Administrateur\\Desktop\\Dossier de travail\\POE_C_NET_12_DECEMBRE\\TP\\TP.csproj",
+      "projectPath": "C:\\Users\\Administrateur\\Desktop\\Dossier de travail\\POE_C_NET_12_DECEMBRE\\TP\\TpHelloMyVillage\\TP.csproj",
       "packagesPath": "C:\\Users\\Administrateur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrateur\\Desktop\\Dossier de travail\\POE_C_NET_12_DECEMBRE\\TP\\obj\\",
+      "outputPath": "C:\\Users\\Administrateur\\Desktop\\Dossier de travail\\POE_C_NET_12_DECEMBRE\\TP\\TpHelloMyVillage\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrateur\\AppData\\Roaming\\NuGet\\NuGet.Config"
