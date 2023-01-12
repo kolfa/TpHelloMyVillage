@@ -88,4 +88,14 @@ public class Village{
         myRessources.addWood(myForest.cutWood(nbrVillagois));
 
     }
+    public void buildHouse (int nbrMaison)
+    {
+        //ajouter les tests
+        myRessources.useStone(House.stone_needed * nbrMaison);
+        myRessources .useWood(House.wood_needed * nbrMaison) ;
+        for(int i =0; i<nbrMaison;i++)
+        {
+            addHouse();
+        }
+    }
 }

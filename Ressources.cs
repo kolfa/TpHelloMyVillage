@@ -19,12 +19,12 @@ public class Ressources
     }
     public int GetWood() 
     {
-        return Wood =10;
+        return Wood;
     }
 
     public int GetStone() 
     {
-        return Stones=10;
+        return Stones;
     }
     public void useStone(int nbr)
     {
