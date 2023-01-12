@@ -17,13 +17,12 @@ public class Ressources
         this.wood =10;
         this.stones= 10;
     }
-    private int  getWood(int wood)
-    {
-        return this.wood =Wood;
+    public int GetWood() {
+        return Wood;
     }
-    private int getStones(int stones)
-    {
-        return this.stones = Stones ;
+
+    public int GetStone() {
+        return Stones;
     }
     public void useStone(int nbr)
     {
@@ -33,6 +32,7 @@ public class Ressources
         }else
         {
             Console.WriteLine("Quantité suffisante : " + Stones);
+            this.Stones -= nbr;
         }
     }
     public void useWood(int nbr)
@@ -43,7 +43,13 @@ public class Ressources
         }else
         {
             Console.WriteLine("Quantité suffisante : " + Wood);
+            this.Wood -= nbr;
         }
+    }
+    public void addStone(int nbr)
+    {
+        //manque test
+        this.Stones += nbr;
     }
 
 }
