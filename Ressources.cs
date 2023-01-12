@@ -17,16 +17,18 @@ public class Ressources
         this.wood =10;
         this.stones= 10;
     }
-    public int GetWood() {
-        return Wood;
+    public int GetWood() 
+    {
+        return Wood =10;
     }
 
-    public int GetStone() {
-        return Stones;
+    public int GetStone() 
+    {
+        return Stones=10;
     }
     public void useStone(int nbr)
     {
-        if ((Stones - nbr) < nbr )
+        if (Stones < nbr )
         {
             Console.WriteLine("Attention, quantité non suffusante !");
         }else
@@ -37,7 +39,7 @@ public class Ressources
     }
     public void useWood(int nbr)
     {
-        if ((Wood - nbr) < Wood )
+        if ((Wood - nbr) < 0 )
         {
             Console.WriteLine("Attention, quantité non suffusante !");
         }else
@@ -50,6 +52,11 @@ public class Ressources
     {
         //manque test
         this.Stones += nbr;
+    }
+    public void addWood(int nbr)
+    {
+        //manque test
+        this.Wood += nbr;
     }
 
 }

@@ -5,6 +5,7 @@ public class Village{
     public int villageois=0;
     public House [] listHouse;
     public Mine myMine;
+    public Forest myForest;
     
     public string Name
     {
@@ -28,6 +29,7 @@ public class Village{
         this.listHouse = new House[1];
         listHouse[0] = this.chefHome ;
         this.myMine= new Mine();
+        this.myForest= new Forest();
 
     }
 
@@ -50,6 +52,15 @@ public class Village{
     }
     public void mineStone(int nbrVillagois)
     {
+        //si nbrvillagois>nbv que je possede ->je ne fais rien j'ai pas assez de villagois
+        if (nbrVillagois > this.villageois)
+        {
+            Console.WriteLine ("Il n'ya pas assez de villagois ! ");
+        //proteger j'ai assez de pierre et assez de bois
+        }else if((Mine.stone_cost * nbrVillagois) > myRessources.GetStone() || (Mine.wood_cost * nbrVillagois) > myRessources.GetWood())
+        {
+            Console.WriteLine("Ressources insuffaisantes");
+        }
         //consommer stone
         myRessources.useStone(Mine.stone_cost * nbrVillagois);
         //consommer wood
@@ -58,10 +69,23 @@ public class Village{
         myRessources.addStone(myMine.mineStone(nbrVillagois));
         
     }
+    public void cutWood(int nbrVillagois)
+    {
+        //si nbrvillagois>nbv que je possede ->je ne fais rien j'ai pas assez de villagois
+        if (nbrVillagois > this.villageois)
+        {
+            Console.WriteLine ("Il n'ya pas assez de villagois ! ");
+        //proteger j'ai assez de pierre et assez de bois
+        }else if((Forest.stone_cost * nbrVillagois) > myRessources.GetStone() || (Forest.wood_cost * nbrVillagois) > myRessources.GetWood())
+        {
+            Console.WriteLine("Ressources insuffaisantes");
+        }
+        //consommer stone
+        myRessources.useStone(Forest.stone_cost * nbrVillagois);
+        //consommer wood
+        myRessources.useWood(Forest.wood_cost * nbrVillagois);
+        //ajouter wood
+        myRessources.addWood(myForest.cutWood(nbrVillagois));
 
-
-//Lorsqu’un villageois utilise la methode `mineStone` celui-ci consomme `Mine.stone_cost` 
-//et `Mine.wood_cost` 
-
-//Et celui-ci vous rapportera `Mine.gain_stone` (créer une methode dans la classes `Ressource` `public addStone(int nbr)` qui ajouteras nbr a stone).
+    }
 }
