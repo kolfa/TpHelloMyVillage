@@ -67,6 +67,7 @@ public class Village{
         myRessources.useWood(Mine.wood_cost * nbrVillagois);
         //ajouter mine
         myRessources.addStone(myMine.mineStone(nbrVillagois));
+        myForest.le
         
     }
     public void cutWood(int nbrVillagois)
@@ -88,7 +89,7 @@ public class Village{
         myRessources.addWood(myForest.cutWood(nbrVillagois));
 
     }
-    public void buildHouse (int nbrMaison)
+    public void buildHouse(int nbrMaison)
     {
         //ajouter les tests
         myRessources.useStone(House.stone_needed * nbrMaison);
@@ -98,4 +99,18 @@ public class Village{
             addHouse();
         }
     }
+    public void upgradeRessource()
+    {
+        myRessources.upgrade();
+        myRessources.level ++;
+    }
+    public void lookAround()
+    {
+        if (myRessources.level >= 1)
+        {
+            myRessources.addStone(1);
+            myRessources.addWood(1);
+        }
+    }
+
 }
